@@ -1,0 +1,38 @@
+post_id,parent_id,comment_id,text,category
+0,0,0,"<p>My answer would be the struggle between frequentist and Bayesian statistics. When people ask you which you ""believe in"", this is not good! Especially for a scientific discipline.</p>
+",comment
+1,1,1,"<pre><code>PROCMiracle &lt;- function(datasource,normalrank=""""BLOM"""")
+  {
+     switch(normalrank,
+      """"BLOM"""" = {
+                  rmod &lt;- -3/8
+                  nmod &lt;- 1/4
+                },
+      """"TUKEY"""" = {
+                  rmod &lt;- -1/3
+                  nmod &lt;- 1/3
+                },
+      """"VW"""" ={
+                  rmod &lt;- 0
+                  nmod &lt;- 1
+            },
+      """"NONE"""" = {
+                  rmod &lt;- 0
+                  nmod &lt;- 0
+                }
+    )
+    print(""""This may be doing something strange with NA values!  Beware!"""")
+    return(scale(qnorm((rank(datasource)+rmod)/(length(datasource)+nmod))))
+  }
+</code></pre>",comment
+2,2,2,"<p>$$\lim_{n\to \infty} n^{-\frac{1}{2}} \mathbf{X_n}$$</p>
+
+<p>Where $\mathbf{X_n}$ is a vector value random variable with density $f_n(\mathbf{x})$ for $\mathbf{x}$ such that $\sum_i x_i=n$, $x_i\in \mathbb{Z}, x_i\ge 0$ and 0 for all other $\mathbf{x}$, where</p>
+
+<p>$$f_{n}(\mathbf{x})=n!\prod_{i=1}^d\frac{p_i^{x_i}}{x_i!}$$</p>",comment
+3,3,3,"""<p>There is the <a href=""""http://en.wikipedia.org/wiki/Kurtosis_risk"""" rel=""""nofollow"""">Kurtosis risk</a> which isn't explained fantastically well at that link. </p>",comment
+4,4,4,"<p>where $\hat p=(p_1+p_2)/(n_1+n_2)$, and the indices $(1,2)$ refer to the first and second line of your table.
+In a two-way contingency table where $H_0:\; p_1=p_2$, this should yield comparable results to the ordinary $\chi^2$ test:</p>",comment
+5,5,5,"""<p><a href=""""http://rads.stackoverflow.com/amzn/click/0387402721"""" rel=""""nofollow""""><em>All of Statistics</em></a></p>
+""",comment
+6,6,6,"Thank you!, This equation $y=ax+b$, is very helpful.",comment
